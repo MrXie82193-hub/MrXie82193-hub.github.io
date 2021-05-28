@@ -77,8 +77,8 @@
 		var date = new Date();
 		var tags = document.getElementsByTagName('h6');
 		var timer = setInterval(function(){
-			var t=d.toLocaleTimeString();
-			tags[0].innerHTML = date.toString();
+			var time = date.toLocaleTimeString();
+			tags[0].innerHTML = time.toString();
 		}, 1000);
 	}
 </script>

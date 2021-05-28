@@ -76,7 +76,10 @@
 	window.onload = function(){
 		var date = new Date();
 		var tags = document.getElementsByTagName('h6');
-		tags[0].innerHTML = date.toString();
+		var timer = setInterval(function(){
+			var t=d.toLocaleTimeString();
+			tags[0].innerHTML = date.toString();
+		}, 1000);
 	}
 </script>
 </head>

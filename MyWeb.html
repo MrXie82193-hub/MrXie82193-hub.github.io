@@ -65,11 +65,42 @@
 	a:hover {
 		background-color: black;
 	}
+	
+	p {
+		background-color: gray;
+		border-radius: 10px;
+		margin: 2px;
+		float: left;
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		color: white;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
 
 	.box {
 		overflow: hidden;
 		width: 1224px;
-		margin: 50px auto;
+		margin: 20px auto;
+	}
+		
+	.download {
+		background-color: #7FFFAA;
+	}
+		
+	.study {
+		background-color: #9370DB;
+	}
+		
+	.tools {
+		background-color: #6495ED;
+	}
+
+	.often {
+		background-color: #FFB6C1;
 	}
 </style>
 <script type="text/javascript">
@@ -85,37 +116,50 @@
 
 <body>
 	<h2>解虎💘杨笑敏</h2>
-	<div class="box">
+	<div class="box" style="margin-top: 50px;margin-bottom: 20px">
 		<a href="index.html" target="_self" title="me">me</a>
 		<a href="funny.html" target="_blank" title="me">funny</a>
-		<!--some download-->
-		<a href="http://www.carrotchou.blog/85.html" target="_blank" title="Camtasia9下载网站">Camtasia下载</a>
-		<a href="https://www.jianshu.com/p/dfb9432c21b6" target="_blank" title="Navicat12下载网站">Navicat12下载</a>
-		<a href="https://msdn.itellyou.cn/" target="_blank" title="系统下载网站">MSDN，我告诉你</a>
-		
-		<!--tools web-->
-		<a href="https://www.webdesignrankings.com/resources/lolcolors/" target="_blank" title="网页颜色网站">网页颜色</a>
-		<a href="https://squoosh.app/" target="_blank" title="图片压缩网站">图片压缩</a>
-		<a href="http://www.jianbian.art/" target="_blank" title="渐变色网站">渐变色网站</a>
-		<!--
-		<a href="https://mvnrepository.com/tags/maven" target="_blank" title="Maven坐标查找网站">Maven Repository</a>
-		<a href="https://www.cnblogs.com/shuideqing/p/12038004.html" target="_blank" title="Linux安装Java环境">Linux安装Java环境</a>
-		<a href="https://www.cnblogs.com/iyitong/p/4688200.html" target="_blank" title="js获取屏幕相关高度">js获取屏幕相关高度</a>
-		<a href="http://www.jeasyui.com/documentation/index.php" target="_blank" title="EasyUi帮助文档">EasyUi帮助文档</a>
-		<a href="http://www.shouce.ren/" target="_blank" title="手册网">手册网</a>
-		-->
-		<a href="https://fanyi.baidu.com/?aldtype=16047#auto/zh" target="_blank" title="百度翻译">百度翻译</a>
-		<a href="https://www.fontke.com/tool/image2ascii/" target="_blank" title="图片转码图">图片转码图</a>
-		
+	</div>
+	<div class="box">
 		<!--often web-->
-		<!--
-		<a href="https://www.atstudy.com/" target="_blank" title="学掌门">学掌门</a>
-		-->
-		<a href="https://www.pixivision.net/zh/" target="_blank" title="插画网站">插画</a>
-		<a href="https://wallhaven.cc" target="_blank" title="壁纸网站">Wallhaven</a>
-		<a href="https://www.bilibili.com/" target="_blank" title="bilibili">bilibili</a>
-		<a href="https://www.huya.com/" target="_blank" title="虎牙直播">虎牙直播</a>
-		<a href="https://www.douyu.com/" target="_blank" title="斗鱼直播">斗鱼直播</a>
+		<!---->
+		<p class="often">often web</p>
+		<a href="https://www.pixivision.net/zh/" target="_blank" title="插画网站" class="often">插画</a>
+		<a href="https://wallhaven.cc" target="_blank" title="壁纸网站" class="often">Wallhaven</a>
+		<a href="https://desk.3gbizhi.com/" target="_blank" title="壁纸网站" class="often">3G壁纸</a>
+		<a href="https://www.bilibili.com/" target="_blank" title="bilibili" class="often">bilibili</a>
+		<a href="https://www.huya.com/" target="_blank" title="虎牙直播" class="often">虎牙直播</a>
+		<a href="https://www.douyu.com/" target="_blank" title="斗鱼直播" class="often">斗鱼直播</a>
+	</div>
+	<div class="box">
+		<!--some download-->
+		<!---->
+		<p class="download">some download</p>
+		<a href="http://www.carrotchou.blog/85.html" target="_blank" title="Camtasia9下载网站" class="download">Camtasia下载</a>
+		<a href="https://www.jianshu.com/p/dfb9432c21b6" target="_blank" title="Navicat12下载网站" class="download">Navicat12下载</a>
+		<a href="https://msdn.itellyou.cn/" target="_blank" title="系统下载网站" class="download">MSDN，我告诉你</a>
+		<a href="https://www.androiddevtools.cn/" target="_blank" title="Android相关下载" class="download">Android相关下载</a>
+	</div>
+	<div class="box">
+		<!--study web-->
+		<!---->
+		<p class="study">study web</p>
+		<a href="https://www.cnblogs.com/shuideqing/p/12038004.html" target="_blank" title="Linux安装Java环境" class="study">Linux安装Java环境</a>
+		<a href="https://www.cnblogs.com/iyitong/p/4688200.html" target="_blank" title="js获取屏幕相关高度" class="study">js获取屏幕相关高度</a>
+		<a href="https://www.atstudy.com/" target="_blank" title="学掌门" class="study">学掌门</a>
+		<a href="https://help.grapecity.com.cn/pages/viewpage.action?pageId=47645923" target="_blank" title="报表工具使用" class="study">报表工具使用</a>
+		<a href="http://www.shouce.ren/" target="_blank" title="手册网" class="study">手册网</a>
+	</div>
+	<div class="box">
+		<!--tools web-->
+		<!---->
+		<p class="tools">tools web</p>
+		<a href="https://mvnrepository.com/tags/maven" target="_blank" title="Maven坐标查找网站" class="tools">Maven Repository</a>
+		<a href="https://www.webdesignrankings.com/resources/lolcolors/" target="_blank" title="网页颜色网站" class="tools">网页颜色</a>
+		<a href="https://squoosh.app/" target="_blank" title="图片压缩网站" class="tools">图片压缩</a>
+		<a href="https://fanyi.baidu.com/?aldtype=16047#auto/zh" target="_blank" title="百度翻译" class="tools">百度翻译</a>
+		<a href="https://www.fontke.com/tool/image2ascii/" target="_blank" title="图片转码图" class="tools">图片转码图</a>
+		<a href="https://www.aigei.com/" target="_blank" title="图标素材网" class="tools">图标素材网</a>
 	</div>
 	<h6></h6>
 </body>

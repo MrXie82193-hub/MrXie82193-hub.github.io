@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
-	<title>解虎💘杨笑敏</title>
+	<title>解💘杨</title>
 	<style>
 	* {
 		margin: 0px;
@@ -13,24 +13,28 @@
 
 	body{
 		background-color: #DCDCDC;
-		/*background-image: url("pic.jpg");*/
 		background-repeat: no-repeat;
 		background-size: 1600px, 980px;
 	}
 
-	h2 { 
-		background-color: black; z-index: 10;
-	  	position: fixed; top: 0px; 
+	.header {
+		background-color: black;
+		z-index: 10;
+	  	position: fixed;
+		top: 0px; 
 	  	display: block;
 	  	width: 100%; 
-	  	height: 40px; 
+	  	height: 40px;
 	  	color: white;
+		font-size: 30px;
+		font-weight: bold;
+		font-family: "黑体";
 	  	text-align: center; 
 	  	line-height: 40px; 
 	  	opacity: 0.6;
 	}
-
-	h6 {
+	
+	.footer {
 		background-color: black;
 		z-index: 10;
 		position: fixed;
@@ -39,6 +43,9 @@
 		width: 100%;
 		height: 20px;
 		color: white;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: "黑体";
 		text-align: center;
 		line-height: 20px;
 		opacity: 0.6;
@@ -102,23 +109,78 @@
 	.often {
 		background-color: #FFB6C1;
 	}
+	
+	.box_time {
+		z-index: 10;
+	  	position: fixed;
+		top: 0px; 
+		right: 0px;
+	  	display: block;
+		width: 80px;
+		height: 40px;
+		float: right;
+		color: white;
+		color: white;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: "黑体";
+	  	text-align: center; 
+	  	line-height: 40px;
+	}
 </style>
 <script type="text/javascript">
 	window.onload = function(){
-		var tags = document.getElementsByTagName('h6');
+		var tag_time = document.getElementsByClassName('footer');
+		var tag_firstMeeting = document.getElementById('firstMeeting');
+		var tag_steady = document.getElementById('steady');
+		var tag_engage = document.getElementById('engage');
+		var tag_register = document.getElementById('register');
+		var tag_marry = document.getElementById('marry');
+		var tag_baby = document.getElementById('baby');
+		function daysUntil(targetDate) {
+			const today = new Date();
+			const target = new Date(targetDate);
+			const difference = today - target;
+			return Math.ceil(difference / (1000 * 60 * 60 * 24));
+		};
+		//见面天数
+		const firstMeeting_days = "👫" + daysUntil('2023-01-28') + "天";
+		//确定关系天数
+		const steady_days = "💑" + daysUntil('2023-02-11') + "天";
+		//订婚天数
+		const engage_days = "🌹" + daysUntil('2023-05-05') + "天";
+		//登记天数
+		const register_days = "📕" + daysUntil('2023-07-26') + "天";
+		//结婚天数
+		const marry_days = "💍" + daysUntil('2023-09-30') + "天";
+		//生娃天数
+		const baby_days = "👶" + daysUntil('2024-11-04') + "天";
+		tag_firstMeeting.innerHTML = firstMeeting_days;
+		tag_steady.innerHTML = steady_days;
+		tag_engage.innerHTML = engage_days;
+		tag_register.innerHTML = register_days;
+		tag_marry.innerHTML = marry_days;
+		tag_baby.innerHTML = baby_days;
 		var timer = setInterval(function(){
 			var time = new Date().toLocaleTimeString();
-			tags[0].innerHTML = time.toString();
+			tag_time[0].innerHTML = time.toString();
 		}, 1000);
 	}
 </script>
 </head>
 
 <body>
-	<h2>解虎💘杨笑敏</h2>
+	<div class="header">解💘杨</div>
+	<div id="firstMeeting" class="box_time" style="right: 400px;"></div>
+	<div id="steady" class="box_time" style="right: 320px;"></div>
+	<div id="engage" class="box_time" style="right: 240px;"></div>
+	<div id="register" class="box_time" style="right: 160px;"></div>
+	<div id="marry" class="box_time" style="right: 80px;"></div>
+	<div id="baby" class="box_time" style="right: 0px;"></div>
 	<div class="box" style="margin-top: 50px;margin-bottom: 20px">
+		<a href="" target="_blank" title="解与杨" style="background-image: url('register.jpg');background-repeat:no-repeat;background-size:cover;"></a>
 		<a href="index.html" target="_self" title="me">me</a>
-		<a href="funny.html" target="_blank" title="me">funny</a>
+		<a href="funny.html" target="_blank" title="funny">funny</a>
 	</div>
 	<div class="box">
 		<!--often web-->
@@ -161,7 +223,7 @@
 		<a href="https://www.fontke.com/tool/image2ascii/" target="_blank" title="图片转码图" class="tools">图片转码图</a>
 		<a href="https://www.aigei.com/" target="_blank" title="图标素材网" class="tools">图标素材网</a>
 	</div>
-	<h6></h6>
+	<div class="footer"></div>
 </body>
 
 </html>

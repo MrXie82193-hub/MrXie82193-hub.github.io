@@ -127,9 +127,36 @@
 	  	text-align: center; 
 	  	line-height: 40px;
 	}
+	
+	.heart-with {
+		position: absolute;
+		background-image: url(heart.png);
+		background-size: cover;
+		pointer-events: none;
+		transform: translate(-50%, -50%);
+		animation: heart_run 2s linear infinite;
+	}
+
+	@keyframes heart_run {
+		0% {
+			transform: translate(-50%, -50%);
+			opacity: 1;
+			filter: hue-rotate(0deg);
+		}
+
+		100% {
+			transform: translate(-50%,-1000%);
+			opacity: 0;
+			filter: hue-rotate(720deg);
+		}
+	}
 </style>
+<script src="effect1.js"></script>
+<script src="effect2.js"></script>
 <script type="text/javascript">
 	window.onload = function(){
+		var body = document.querySelector("body");
+		heartWith(body);
 		var tag_time = document.getElementsByClassName('footer');
 		var tag_firstMeeting = document.getElementById('firstMeeting');
 		var tag_steady = document.getElementById('steady');

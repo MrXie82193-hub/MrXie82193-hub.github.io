@@ -1,6 +1,6 @@
 var stop, staticx;
 var img = new Image();
-img.src = "flower1.png";
+img.src = "flower.png";
 
 function Sakura(x, y, s, r, fn) {
 	this.x = x;

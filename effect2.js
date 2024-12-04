@@ -8,7 +8,7 @@ function heartWith(body) {
         document.onmousemove = function (event) {
             var heart = document.createElement("div");
             heart.className = "heart-with";
-            var x = event.clientX, y = event.clientY;
+            var x = event.pageX, y = event.pageY;
             // 设置heart跟随鼠标的位置出现
             heart.style.left = x + "px", heart.style.top = y + "px";
             // 设置heart的大小随机 Math.random()返回一个0~1之间的数
@@ -22,6 +22,5 @@ function heartWith(body) {
             }, 2000);
         }
     };
-
     this.init();
 }

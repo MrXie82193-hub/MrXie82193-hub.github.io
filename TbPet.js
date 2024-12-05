@@ -68,6 +68,14 @@ $(document).ready(function(){
 			  	if (e.clientX >= rect.left + 27 && e.clientX <= rect.left + 71 && e.clientY >= 797 && e.clientY <= 820) {
 			  		end_time = start_dialog(200, 200, 200, 100, "这是你该碰的地方吗？流氓", []);
 			  	};
+			  	var cgimg_timer1 = setTimeout(function(){
+			    	$(".tbpet").attr("src","small.gif");
+			    	clearTimeout(cgimg_timer1);
+			    }, 0);
+			    var cgimg_timer2 = setTimeout(function(){
+			    	$(".tbpet").attr("src","static.jpg");
+			    	clearTimeout(cgimg_timer2);
+			    }, 1000);
 			});
 		    clearTimeout(over_timer);
         }, init_time + (show_time * num1) + (zs_time * num1) + hide_time + ((show_time + zs_time + hide_time) * (text.length - 1)));

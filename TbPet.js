@@ -61,21 +61,37 @@ $(document).ready(function(){
 				var rect = document.querySelector('.tbpet').getBoundingClientRect();
 			  	if (((e.clientX >= rect.left + 27 && e.clientX <= rect.left + 45) || (e.clientX >= rect.left + 71 && e.clientX <= rect.left + 85)) && e.clientY >= 690 && e.clientY <= 704) {
 			  		end_time = start_dialog(200, 200, 200, 100, "别碰我耳朵，我生气了！", []);
+			  		var cgimg_timer1 = setTimeout(function(){
+				    	$(".tbpet").attr("src","small.gif");
+				    	clearTimeout(cgimg_timer1);
+				    }, 0);
+				    var cgimg_timer2 = setTimeout(function(){
+				    	$(".tbpet").attr("src","static.jpg");
+				    	clearTimeout(cgimg_timer2);
+				    }, 1000);
 			  	};
 			  	if (e.clientX >= rect.left + 37 && e.clientX <= rect.left + 73 && e.clientY >= 709 && e.clientY <= 752) {
 			  		end_time = start_dialog(200, 200, 200, 100, "把我妆弄花了~", []);
+			  		var cgimg_timer1 = setTimeout(function(){
+				    	$(".tbpet").attr("src","small.gif");
+				    	clearTimeout(cgimg_timer1);
+				    }, 0);
+				    var cgimg_timer2 = setTimeout(function(){
+				    	$(".tbpet").attr("src","static.jpg");
+				    	clearTimeout(cgimg_timer2);
+				    }, 1000);
 			  	};
 			  	if (e.clientX >= rect.left + 27 && e.clientX <= rect.left + 71 && e.clientY >= 797 && e.clientY <= 820) {
 			  		end_time = start_dialog(200, 200, 200, 100, "这是你该碰的地方吗？流氓", []);
+			  		var cgimg_timer1 = setTimeout(function(){
+				    	$(".tbpet").attr("src","small.gif");
+				    	clearTimeout(cgimg_timer1);
+				    }, 0);
+				    var cgimg_timer2 = setTimeout(function(){
+				    	$(".tbpet").attr("src","static.jpg");
+				    	clearTimeout(cgimg_timer2);
+				    }, 1000);
 			  	};
-			  	var cgimg_timer1 = setTimeout(function(){
-			    	$(".tbpet").attr("src","small.gif");
-			    	clearTimeout(cgimg_timer1);
-			    }, 0);
-			    var cgimg_timer2 = setTimeout(function(){
-			    	$(".tbpet").attr("src","static.jpg");
-			    	clearTimeout(cgimg_timer2);
-			    }, 1000);
 			});
 		    clearTimeout(over_timer);
         }, init_time + (show_time * num1) + (zs_time * num1) + hide_time + ((show_time + zs_time + hide_time) * (text.length - 1)));

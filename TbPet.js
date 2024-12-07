@@ -59,6 +59,7 @@ $(document).ready(function(){
 			});
 			$(".tbpet").mousemove(function(e) {
 				var rect = document.querySelector('.tbpet').getBoundingClientRect();
+				console.log(e.clientX);
 			  	if (((e.clientX >= rect.left + 27 && e.clientX <= rect.left + 45) || (e.clientX >= rect.left + 71 && e.clientX <= rect.left + 85)) && e.clientY >= 690 && e.clientY <= 704) {
 			  		end_time = start_dialog(200, 200, 200, 100, "别碰我耳朵，我生气了！", []);
 			  		var cgimg_timer1 = setTimeout(function(){

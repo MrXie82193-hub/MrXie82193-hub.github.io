@@ -58,7 +58,7 @@ $(document).ready(function(){
     			end_time = start_dialog(200, 1000, 1000, 200, "你回应我我很开心~", ["今天是" + incident.data + "的第" + daysUntil(incident.time) + "天","试着对我做点什么叭~"]);
 			});
 			$(".lt_ear").mouseover(function() {
-				end_time = start_dialog(200, 200, 200, 100, "别碰我左耳朵，我生气了！", []);
+				end_time = start_dialog(200, 200, 700, 200, "别碰我左耳朵，我生气了！", []);
 				var cgimg_timer1 = setTimeout(function(){
 					$(".tbpet").attr("src","small.gif");
 					clearTimeout(cgimg_timer1);
@@ -69,7 +69,7 @@ $(document).ready(function(){
 				}, 1000);
 			});
 			$(".rt_ear").mouseover(function() {
-				end_time = start_dialog(200, 200, 200, 100, "别碰我右耳朵，我生气了！", []);
+				end_time = start_dialog(200, 200, 700, 200, "别碰我右耳朵，我生气了！", []);
 				var cgimg_timer1 = setTimeout(function(){
 					$(".tbpet").attr("src","small.gif");
 					clearTimeout(cgimg_timer1);
@@ -80,7 +80,7 @@ $(document).ready(function(){
 				}, 1000);
 			});
 			$(".face").mouseover(function() {
-				end_time = start_dialog(200, 200, 200, 100, "把我妆弄花了~", []);
+				end_time = start_dialog(200, 200, 700, 200, "把我妆弄花了~", []);
 				var cgimg_timer1 = setTimeout(function(){
 					$(".tbpet").attr("src","small.gif");
 					clearTimeout(cgimg_timer1);
@@ -91,7 +91,7 @@ $(document).ready(function(){
 				}, 1000);
 			});
 			$(".chest").mouseover(function() {
-				end_time = start_dialog(200, 200, 200, 100, "这是你该碰的地方吗？流氓", []);
+				end_time = start_dialog(200, 200, 700, 200, "这是你该碰的地方吗？流氓", []);
 				var cgimg_timer1 = setTimeout(function(){
 					$(".tbpet").attr("src","small.gif");
 					clearTimeout(cgimg_timer1);

@@ -57,42 +57,49 @@ $(document).ready(function(){
 			    var incident = incident_arry[Math.floor(Math.random() * 7)];
     			end_time = start_dialog(200, 1000, 1000, 200, "你回应我我很开心~", ["今天是" + incident.data + "的第" + daysUntil(incident.time) + "天","试着对我做点什么叭~"]);
 			});
-			$(".tbpet").mousemove(function(e) {
-				var rect = document.querySelector('.tbpet').getBoundingClientRect();
-				console.log(e.clientX);
-			  	if (((e.clientX >= rect.left + 27 && e.clientX <= rect.left + 45) || (e.clientX >= rect.left + 71 && e.clientX <= rect.left + 85)) && e.clientY >= 690 && e.clientY <= 704) {
-			  		end_time = start_dialog(200, 200, 200, 100, "别碰我耳朵，我生气了！", []);
-			  		var cgimg_timer1 = setTimeout(function(){
-				    	$(".tbpet").attr("src","small.gif");
-				    	clearTimeout(cgimg_timer1);
-				    }, 0);
-				    var cgimg_timer2 = setTimeout(function(){
-				    	$(".tbpet").attr("src","static.jpg");
-				    	clearTimeout(cgimg_timer2);
-				    }, 1000);
-			  	};
-			  	if (e.clientX >= rect.left + 37 && e.clientX <= rect.left + 73 && e.clientY >= 709 && e.clientY <= 752) {
-			  		end_time = start_dialog(200, 200, 200, 100, "把我妆弄花了~", []);
-			  		var cgimg_timer1 = setTimeout(function(){
-				    	$(".tbpet").attr("src","small.gif");
-				    	clearTimeout(cgimg_timer1);
-				    }, 0);
-				    var cgimg_timer2 = setTimeout(function(){
-				    	$(".tbpet").attr("src","static.jpg");
-				    	clearTimeout(cgimg_timer2);
-				    }, 1000);
-			  	};
-			  	if (e.clientX >= rect.left + 27 && e.clientX <= rect.left + 71 && e.clientY >= 797 && e.clientY <= 820) {
-			  		end_time = start_dialog(200, 200, 200, 100, "这是你该碰的地方吗？流氓", []);
-			  		var cgimg_timer1 = setTimeout(function(){
-				    	$(".tbpet").attr("src","small.gif");
-				    	clearTimeout(cgimg_timer1);
-				    }, 0);
-				    var cgimg_timer2 = setTimeout(function(){
-				    	$(".tbpet").attr("src","static.jpg");
-				    	clearTimeout(cgimg_timer2);
-				    }, 1000);
-			  	};
+			$(".lt_ear").mouseover(function() {
+				end_time = start_dialog(200, 200, 200, 100, "别碰我左耳朵，我生气了！", []);
+				var cgimg_timer1 = setTimeout(function(){
+					$(".tbpet").attr("src","small.gif");
+					clearTimeout(cgimg_timer1);
+				}, 0);
+				var cgimg_timer2 = setTimeout(function(){
+					$(".tbpet").attr("src","static.jpg");
+					clearTimeout(cgimg_timer2);
+				}, 1000);
+			});
+			$(".rt_ear").mouseover(function() {
+				end_time = start_dialog(200, 200, 200, 100, "别碰我右耳朵，我生气了！", []);
+				var cgimg_timer1 = setTimeout(function(){
+					$(".tbpet").attr("src","small.gif");
+					clearTimeout(cgimg_timer1);
+				}, 0);
+				var cgimg_timer2 = setTimeout(function(){
+					$(".tbpet").attr("src","static.jpg");
+					clearTimeout(cgimg_timer2);
+				}, 1000);
+			});
+			$(".face").mouseover(function() {
+				end_time = start_dialog(200, 200, 200, 100, "把我妆弄花了~", []);
+				var cgimg_timer1 = setTimeout(function(){
+					$(".tbpet").attr("src","small.gif");
+					clearTimeout(cgimg_timer1);
+				}, 0);
+				var cgimg_timer2 = setTimeout(function(){
+					$(".tbpet").attr("src","static.jpg");
+					clearTimeout(cgimg_timer2);
+				}, 1000);
+			});
+			$(".chest").mouseover(function() {
+				end_time = start_dialog(200, 200, 200, 100, "这是你该碰的地方吗？流氓", []);
+				var cgimg_timer1 = setTimeout(function(){
+					$(".tbpet").attr("src","small.gif");
+					clearTimeout(cgimg_timer1);
+				}, 0);
+				var cgimg_timer2 = setTimeout(function(){
+					$(".tbpet").attr("src","static.jpg");
+					clearTimeout(cgimg_timer2);
+				}, 1000);
 			});
 		    clearTimeout(over_timer);
         }, init_time + (show_time * num1) + (zs_time * num1) + hide_time + ((show_time + zs_time + hide_time) * (text.length - 1)));
@@ -104,6 +111,3 @@ $(document).ready(function(){
     }, 7500);
     end_time = start_dialog(200, 1000, 500, 200, "啊~睡得好舒服呀~", ["我好想你啊~","试着对我做点什么叭~"]);
 });
-// 1255 1273   1299 1313
-// 1265 1301
-// 1255 1313

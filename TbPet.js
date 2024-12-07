@@ -6,7 +6,6 @@ $(document).ready(function(){
 		return Math.ceil(difference / (1000 * 60 * 60 * 24));
 	};
 	function start_dialog(init_time, show_time, zs_time, hide_time, init_text, text) {
-		$(".tbpet").off();
 		if (init_time < 500) {
 			init_time = 500;
 		}
@@ -39,25 +38,35 @@ $(document).ready(function(){
 		};
 		var over_timer = setTimeout(function(){
 		    $(".dialog").hide(hide_time);
-		    $(".tbpet").dblclick(function() {
-    			var cgimg_timer1 = setTimeout(function(){
-			    	$(".tbpet").attr("src","happy.gif");
-			    	clearTimeout(cgimg_timer1);
-			    }, 0);
-			    var cgimg_timer2 = setTimeout(function(){
-			    	$(".tbpet").attr("src","static.jpg");
-			    	clearTimeout(cgimg_timer2);
-			    }, 7500);
-			    var incident_arry = [{data: "我们认识",time: "2023-01-19"},
-			    	{data: "我成为你女朋友",time: "2023-02-11"},
-			    	{data: "我们订婚",time: "2023-05-05"},
-			    	{data: "我们登记",time: "2023-07-26"},
-			    	{data: "我们结婚",time: "2023-09-30"},
-			    	{data: "我的孩子出生",time: "2024-11-04"}];
-			    var incident = incident_arry[Math.floor(Math.random() * 7)];
-    			end_time = start_dialog(200, 1000, 1000, 200, "你回应我我很开心~", ["今天是" + incident.data + "的第" + daysUntil(incident.time) + "天","试着对我做点什么叭~"]);
+			$(".tbpet").on("dblclick", function() {
+				$(".tbpet").off("dblclick");
+				$(".lt_ear").off("mouseover");
+				$(".rt_ear").off("mouseover");
+				$(".face").off("mouseover");
+				$(".chest").off("mouseover");
+				var cgimg_timer1 = setTimeout(function(){
+					$(".tbpet").attr("src","happy.gif");
+					clearTimeout(cgimg_timer1);
+				}, 0);
+				var cgimg_timer2 = setTimeout(function(){
+					$(".tbpet").attr("src","static.jpg");
+					clearTimeout(cgimg_timer2);
+				}, 7500);
+				var incident_arry = [{data: "我们认识",time: "2023-01-19"},
+					{data: "我成为你女朋友",time: "2023-02-11"},
+					{data: "我们订婚",time: "2023-05-05"},
+					{data: "我们登记",time: "2023-07-26"},
+					{data: "我们结婚",time: "2023-09-30"},
+					{data: "我的孩子出生",time: "2024-11-04"}];
+				var incident = incident_arry[Math.floor(Math.random() * 7)];
+				end_time = start_dialog(200, 1000, 1000, 200, "你回应我我很开心~", ["今天是" + incident.data + "的第" + daysUntil(incident.time) + "天","试着对我做点什么叭~"]);
 			});
-			$(".lt_ear").mouseover(function() {
+			$(".lt_ear").on("mouseover", function() {
+				$(".tbpet").off("dblclick");
+				$(".lt_ear").off("mouseover");
+				$(".rt_ear").off("mouseover");
+				$(".face").off("mouseover");
+				$(".chest").off("mouseover");
 				end_time = start_dialog(200, 200, 700, 200, "别碰我左耳朵，我生气了！", []);
 				var cgimg_timer1 = setTimeout(function(){
 					$(".tbpet").attr("src","small.gif");
@@ -68,7 +77,12 @@ $(document).ready(function(){
 					clearTimeout(cgimg_timer2);
 				}, 1000);
 			});
-			$(".rt_ear").mouseover(function() {
+			$(".rt_ear").on("mouseover", function() {
+				$(".tbpet").off("dblclick");
+				$(".lt_ear").off("mouseover");
+				$(".rt_ear").off("mouseover");
+				$(".face").off("mouseover");
+				$(".chest").off("mouseover");
 				end_time = start_dialog(200, 200, 700, 200, "别碰我右耳朵，我生气了！", []);
 				var cgimg_timer1 = setTimeout(function(){
 					$(".tbpet").attr("src","small.gif");
@@ -79,7 +93,12 @@ $(document).ready(function(){
 					clearTimeout(cgimg_timer2);
 				}, 1000);
 			});
-			$(".face").mouseover(function() {
+			$(".face").on("mouseover", function() {
+				$(".tbpet").off("dblclick");
+				$(".lt_ear").off("mouseover");
+				$(".rt_ear").off("mouseover");
+				$(".face").off("mouseover");
+				$(".chest").off("mouseover");
 				end_time = start_dialog(200, 200, 700, 200, "把我妆弄花了~", []);
 				var cgimg_timer1 = setTimeout(function(){
 					$(".tbpet").attr("src","small.gif");
@@ -90,7 +109,12 @@ $(document).ready(function(){
 					clearTimeout(cgimg_timer2);
 				}, 1000);
 			});
-			$(".chest").mouseover(function() {
+			$(".chest").on("mouseover", function() {
+				$(".tbpet").off("dblclick");
+				$(".lt_ear").off("mouseover");
+				$(".rt_ear").off("mouseover");
+				$(".face").off("mouseover");
+				$(".chest").off("mouseover");
 				end_time = start_dialog(200, 200, 700, 200, "这是你该碰的地方吗？流氓", []);
 				var cgimg_timer1 = setTimeout(function(){
 					$(".tbpet").attr("src","small.gif");

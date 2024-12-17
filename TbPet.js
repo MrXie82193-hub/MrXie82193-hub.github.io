@@ -1,4 +1,19 @@
 $(document).ready(function(){
+	var anum = $("a").size();
+	var aindex = 0;
+	var a_timer = setInterval(function(){
+		if (aindex < anum) {
+			$("a").eq(aindex).show(0);
+			$("a").eq(aindex).animate({
+				margin: '4px',
+				opacity: 0.7
+			}, 100);
+		} else {
+			clearInterval(a_timer);
+		};
+		aindex += 1;
+	}, 50);
+	
 	var incident_arry = [{data: "我们认识",time: "2023-01-19"},
 		{data: "我成为你女朋友",time: "2023-02-11"},
 		{data: "我们订婚",time: "2023-05-05"},

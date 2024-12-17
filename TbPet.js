@@ -12,7 +12,7 @@ $(document).ready(function(){
 			clearInterval(a_timer);
 		};
 		aindex += 1;
-	}, 50);
+	}, 100);
 	
 	var incident_arry = [{data: "我们认识",time: "2023-01-19"},
 		{data: "我成为你女朋友",time: "2023-02-11"},

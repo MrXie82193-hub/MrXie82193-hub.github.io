@@ -1,4 +1,11 @@
 $(document).ready(function(){
+	var incident_arry = [{data: "我们认识",time: "2023-01-19"},
+		{data: "我成为你女朋友",time: "2023-02-11"},
+		{data: "我们订婚",time: "2023-05-05"},
+		{data: "我们登记",time: "2023-07-26"},
+		{data: "我们结婚",time: "2023-09-30"},
+		{data: "我的孩子出生",time: "2024-11-04"}];
+	
 	function daysUntil(targetDate) {
 		const today = new Date();
 		const target = new Date(targetDate);
@@ -60,12 +67,6 @@ $(document).ready(function(){
 				$(".tbpet").attr({"src": "static.jpg", "lock": "FALSE"});
 				clearTimeout(cgimg_timer);
 			}, 7500);
-			var incident_arry = [{data: "我们认识",time: "2023-01-19"},
-				{data: "我成为你女朋友",time: "2023-02-11"},
-				{data: "我们订婚",time: "2023-05-05"},
-				{data: "我们登记",time: "2023-07-26"},
-				{data: "我们结婚",time: "2023-09-30"},
-				{data: "我的孩子出生",time: "2024-11-04"}];
 			var incident = incident_arry[Math.floor(Math.random() * 7)];
 			end_time = start_dialog(200, 1000, 1000, 200, "你回应我我很开心~", ["今天是" + incident.data + "的第" + daysUntil(incident.time) + "天","试着对我做点什么叭~"]);
 		};

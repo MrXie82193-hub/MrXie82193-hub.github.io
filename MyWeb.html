@@ -16,10 +16,6 @@
 		overflow-x: hidden;
 	}
 
-	body::-webkit-scrollbar {
-		display: none;
-	}
-
 	.header {
 		background-color: black;
 		z-index: 10;
@@ -35,6 +31,14 @@
 	  	text-align: center; 
 	  	line-height: 40px; 
 	  	opacity: 0.6;
+	}
+
+	.pseudo {
+		background-image: url("sdj.gif");
+		background-size: 400px 400px;
+		background-repeat: repeat-x;
+	  	width: 100%;
+	  	padding-top: 50px;
 	}
 	
 	.footer {
@@ -73,7 +77,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		transition: transform 1s, background-color 1s, margin 0.1s, color 1s;
+		transition: transform 1s, background-color 1s, margin 0.1s, color 1s, opacity 1s;
 	}
 
 	.plugin {
@@ -83,20 +87,27 @@
 		text-overflow: inherit;
 		white-space: none;
 		opacity: 1;
-		transition: transform 1s, background-color 1s, width 1s, height 1s, margin 0.1s, color 1s;
+		transition: transform 1s, background-color 1s, background-image 1s, width 1s, height 1s, margin 0.1s, color 1s, opacity 1s;
 	}
 
 	.plugin:hover {
-		width: 400px;
-		height: 200px;
+		border: none;
+		background-image: url("blt.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: #5e5e5f;
+		width: 450px;
+		height: 250px;
 		color: #404146;
-		transform: scale(1.04, 1.04) rotateZ(360deg);
+		padding: 50px 25px;
+		transform: scale(1.02, 1.02) rotateZ(360deg);
 	}
 
 	a:hover {
 		border: 2px solid black;
 		background-color: #ff7473;
 		color: #404146;
+		opacity: 1;
 		transform: scale(1.04, 1.04);
 	}
 	
@@ -235,7 +246,7 @@
 	}
 
 	.weather {
-		width: 178px;
+		width: 180px;
 		height: 100%;
 		box-sizing: border-box;
 		margin: 0px 10px;
@@ -257,7 +268,7 @@
 	}
 
 	.calendar {
-		width: 178px;
+		width: 180px;
 		height: 100%;
 		box-sizing: border-box;
 		margin: 0px 10px;
@@ -328,82 +339,84 @@
 <body>
 	<div class="header">解💖杨</div>
 	<div id="some_times" class="some_times"></div>
-	<div class="box" style="margin-top: 50px;margin-bottom: 5px">
-		<p class="sentence"></p>
-		<a target="_blank" class="plugin">
-			<div class="weather">
-				<div id='place'></div>
-				<div id='weather'></div>
-				<div id="temperature"></div>
-				<div id="precipitation"></div>
-				<div id="windDirection"></div>
-				<div id="windScale"></div>
-			</div>
-			<div class="calendar">
-				<div id='data1'></div>
-				<div id='data2'></div>
-				<div id="data3"></div>
-				<div id="data4"></div>
-				<div id="data5"></div>
-				<div id="data6"></div>
-				<div id="data7"></div>
-			</div>
-		</a>
-		<a href="index.html" target="_self" title="me">me</a>
-		<a href="funny.html" target="_blank" title="funny">funny</a>
-	</div>
-	<div class="box">
-		<!--often web-->
-		<!---->
-		<p class="often">often web</p>
-		<a href="https://www.pixivision.net/zh/" target="_blank" title="插画网站" class="often">插画</a>
-		<a href="https://wallhaven.cc" target="_blank" title="壁纸网站" class="often">Wallhaven</a>
-		<a href="https://desk.3gbizhi.com/" target="_blank" title="壁纸网站" class="often">3G壁纸</a>
-		<a href="https://www.bizhihui.com/" target="_blank" title="壁纸网站" class="often">壁纸汇</a>
-		<a href="https://www.bilibili.com/" target="_blank" title="bilibili" class="often">bilibili</a>
-		<a href="https://www.huya.com/" target="_blank" title="虎牙直播" class="often">虎牙直播</a>
-		<a href="https://www.douyu.com/" target="_blank" title="斗鱼直播" class="often">斗鱼直播</a>
-	</div>
-	<div class="box">
-		<!--some download-->
-		<!---->
-		<p class="download">some download</p>
-		<a href="http://www.carrotchou.blog/85.html" target="_blank" title="Camtasia9下载网站" class="download">Camtasia下载</a>
-		<a href="https://www.jianshu.com/p/dfb9432c21b6" target="_blank" title="Navicat12下载网站" class="download">Navicat12下载</a>
-		<a href="https://msdn.itellyou.cn/" target="_blank" title="系统下载网站" class="download">MSDN，我告诉你</a>
-		<a href="https://www.androiddevtools.cn/" target="_blank" title="Android相关下载" class="download">Android相关下载</a>
-	</div>
-	<div class="box">
-		<!--study web-->
-		<!---->
-		<p class="study">study web</p>
-		<a href="https://www.cnblogs.com/shuideqing/p/12038004.html" target="_blank" title="Linux安装Java环境" class="study">Linux安装Java环境</a>
-		<a href="https://www.cnblogs.com/iyitong/p/4688200.html" target="_blank" title="js获取屏幕相关高度" class="study">js获取屏幕相关高度</a>
-		<a href="https://www.atstudy.com/" target="_blank" title="学掌门" class="study">学掌门</a>
-		<a href="https://help.grapecity.com.cn/pages/viewpage.action?pageId=47645923" target="_blank" title="报表工具使用" class="study">报表工具使用</a>
-		<a href="http://www.shouce.ren/" target="_blank" title="手册网" class="study">手册网</a>
-	</div>
-	<div class="box" style="margin-bottom: 30px">
-		<!--tools web-->
-		<!---->
-		<p class="tools">tools web</p>
-		<a href="https://mvnrepository.com/tags/maven" target="_blank" title="Maven坐标查找网站" class="tools">Maven Repository</a>
-		<a href="https://www.webdesignrankings.com/resources/lolcolors/" target="_blank" title="网页颜色网站" class="tools">网页颜色</a>
-		<a href="https://www.apihz.cn/" target="_blank" title="接口网站" class="tools">接口盒子</a>
-		<a href="https://squoosh.app/" target="_blank" title="图片压缩网站" class="tools">图片压缩</a>
-		<a href="https://fanyi.baidu.com/?aldtype=16047#auto/zh" target="_blank" title="百度翻译" class="tools">百度翻译</a>
-		<a href="https://www.fontke.com/tool/image2ascii/" target="_blank" title="图片转码图" class="tools">图片转码图</a>
-		<a href="https://www.aigei.com/" target="_blank" title="图标素材网" class="tools">图标素材网</a>
-		<a href="https://css-loaders.com/" target="_blank" title="css加载样式素材网" class="tools">css加载样式素材网</a>
-	</div>
-	<div class="footer"></div>
-	<div class="main">
-		<div class="dialog" lock="FALSE"></div>
-		<img class= "tbpet" src="wakeup.gif"  width="110px" height="160px" lock="FALSE"></img>
-		<div class = "lt_ear"></div>
-		<div class = "rt_ear"></div>
-		<div class = "face"></div>
-		<div class = "chest"></div>
+	<div class="pseudo">
+		<div class="box" style="margin-bottom: 5px">
+			<p class="sentence"></p>
+			<a target="_blank" class="plugin">
+				<div class="weather">
+					<div id='place'></div>
+					<div id='weather'></div>
+					<div id="temperature"></div>
+					<div id="precipitation"></div>
+					<div id="windDirection"></div>
+					<div id="windScale"></div>
+				</div>
+				<div class="calendar">
+					<div id='data1'></div>
+					<div id='data2'></div>
+					<div id="data3"></div>
+					<div id="data4"></div>
+					<div id="data5"></div>
+					<div id="data6"></div>
+					<div id="data7"></div>
+				</div>
+			</a>
+			<a href="index.html" target="_self" title="me">me</a>
+			<a href="funny.html" target="_blank" title="funny">funny</a>
+		</div>
+		<div class="box">
+			<!--often web-->
+			<!---->
+			<p class="often">often web</p>
+			<a href="https://www.pixivision.net/zh/" target="_blank" title="插画网站" class="often">插画</a>
+			<a href="https://wallhaven.cc" target="_blank" title="壁纸网站" class="often">Wallhaven</a>
+			<a href="https://desk.3gbizhi.com/" target="_blank" title="壁纸网站" class="often">3G壁纸</a>
+			<a href="https://www.bizhihui.com/" target="_blank" title="壁纸网站" class="often">壁纸汇</a>
+			<a href="https://www.bilibili.com/" target="_blank" title="bilibili" class="often">bilibili</a>
+			<a href="https://www.huya.com/" target="_blank" title="虎牙直播" class="often">虎牙直播</a>
+			<a href="https://www.douyu.com/" target="_blank" title="斗鱼直播" class="often">斗鱼直播</a>
+		</div>
+		<div class="box">
+			<!--some download-->
+			<!---->
+			<p class="download">some download</p>
+			<a href="http://www.carrotchou.blog/85.html" target="_blank" title="Camtasia9下载网站" class="download">Camtasia下载</a>
+			<a href="https://www.jianshu.com/p/dfb9432c21b6" target="_blank" title="Navicat12下载网站" class="download">Navicat12下载</a>
+			<a href="https://msdn.itellyou.cn/" target="_blank" title="系统下载网站" class="download">MSDN，我告诉你</a>
+			<a href="https://www.androiddevtools.cn/" target="_blank" title="Android相关下载" class="download">Android相关下载</a>
+		</div>
+		<div class="box">
+			<!--study web-->
+			<!---->
+			<p class="study">study web</p>
+			<a href="https://www.cnblogs.com/shuideqing/p/12038004.html" target="_blank" title="Linux安装Java环境" class="study">Linux安装Java环境</a>
+			<a href="https://www.cnblogs.com/iyitong/p/4688200.html" target="_blank" title="js获取屏幕相关高度" class="study">js获取屏幕相关高度</a>
+			<a href="https://www.atstudy.com/" target="_blank" title="学掌门" class="study">学掌门</a>
+			<a href="https://help.grapecity.com.cn/pages/viewpage.action?pageId=47645923" target="_blank" title="报表工具使用" class="study">报表工具使用</a>
+			<a href="http://www.shouce.ren/" target="_blank" title="手册网" class="study">手册网</a>
+		</div>
+		<div class="box" style="margin-bottom: 30px">
+			<!--tools web-->
+			<!---->
+			<p class="tools">tools web</p>
+			<a href="https://mvnrepository.com/tags/maven" target="_blank" title="Maven坐标查找网站" class="tools">Maven Repository</a>
+			<a href="https://www.webdesignrankings.com/resources/lolcolors/" target="_blank" title="网页颜色网站" class="tools">网页颜色</a>
+			<a href="https://www.apihz.cn/" target="_blank" title="接口网站" class="tools">接口盒子</a>
+			<a href="https://squoosh.app/" target="_blank" title="图片压缩网站" class="tools">图片压缩</a>
+			<a href="https://fanyi.baidu.com/?aldtype=16047#auto/zh" target="_blank" title="百度翻译" class="tools">百度翻译</a>
+			<a href="https://www.fontke.com/tool/image2ascii/" target="_blank" title="图片转码图" class="tools">图片转码图</a>
+			<a href="https://www.aigei.com/" target="_blank" title="图标素材网" class="tools">图标素材网</a>
+			<a href="https://css-loaders.com/" target="_blank" title="css加载样式素材网" class="tools">css加载样式素材网</a>
+		</div>
+		<div class="footer"></div>
+		<div class="main">
+			<div class="dialog" lock="FALSE"></div>
+			<img class= "tbpet" src="wakeup.gif"  width="110px" height="160px" lock="FALSE"></img>
+			<div class = "lt_ear"></div>
+			<div class = "rt_ear"></div>
+			<div class = "face"></div>
+			<div class = "chest"></div>
+		</div>
 	</div>
 </body>
 </html>

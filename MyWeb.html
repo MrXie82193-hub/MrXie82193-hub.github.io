@@ -16,6 +16,10 @@
 		overflow-x: hidden;
 	}
 
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
 	.header {
 		background-color: black;
 		z-index: 10;
@@ -63,7 +67,7 @@
 		text-align: center;
 		line-height: 100px;
 		color: white;
-		opacity: 0;
+		opacity: 0.7;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -225,14 +229,26 @@
 		left: 20px;
 	}
 </style>
-<!-- <script src="effect1.js"></script> -->
-<!-- <script src="effect2.js"></script> -->
 <script type="text/javascript">
 	window.onload = function(){
+		var anum = $("a").size();
+		var aindex = 0;
+		var a_timer = setInterval(function(){
+			if (aindex < anum) {
+				$("a").eq(aindex).show(0);
+				$("a").eq(aindex).animate({
+					margin: '4px',
+					opacity: 0.7
+				}, 100);
+			} else {
+				clearInterval(a_timer);
+			};
+			aindex += 1;
+		}, 50);
 		/*
 		var body = document.querySelector("body");
 		heartWith(body);
-  		*/
+		*/
 		var tag_time = document.getElementsByClassName('footer');
 		var tag_firstMeeting = document.getElementById('firstMeeting');
 		var tag_steady = document.getElementById('steady');
@@ -272,6 +288,8 @@
 </script>
 <script src="jquery.min.js"></script>
 <script src="TbPet.js"></script>
+<!-- <script src="effect1.js"></script> -->
+<!-- <script src="effect2.js"></script> -->
 </head>
 <body>
 	<div class="header">解💖杨</div>

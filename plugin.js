@@ -117,6 +117,7 @@ $(document).ready(function() {
 						   	dataType: "json",
 							success: function(data){
 								datas = data.data;
+								earthquakes = [];
 								for (let index = 0; index < datas.length; index++) {
 									let distancem = calculateDistance(lat, lon, datas[index].weidu, datas[index].jingdu);
 									if (index == 0) {
@@ -132,7 +133,6 @@ $(document).ready(function() {
 								};
 								if (earthquake.weizhi == datas[earthquake.index].weizhi && earthquake.leve == datas[earthquake.index].leve && earthquake.addtime == datas[earthquake.index].addtime) {
 									earthquake.issame = true;
-									earthquakes = [];
 								} else {
 									console.log(earthquakes);
 									earthquake.issame = false;
@@ -158,6 +158,7 @@ $(document).ready(function() {
 							   	dataType: "json",
 								success: function(data){
 									datas = data.data;
+									earthquakes = [];
 									for (let index = 0; index < datas.length; index++) {
 										let distancem = calculateDistance(lat, lon, datas[index].weidu, datas[index].jingdu);
 										if (index == 0) {
@@ -173,7 +174,6 @@ $(document).ready(function() {
 									};
 									if (earthquake.weizhi == datas[earthquake.index].weizhi && earthquake.leve == datas[earthquake.index].leve && earthquake.addtime == datas[earthquake.index].addtime) {
 										earthquake.issame = true;
-										earthquakes = [];
 									} else {
 										console.log(earthquakes);
 										earthquake.issame = false;
@@ -191,7 +191,7 @@ $(document).ready(function() {
 								    console.error("AJAX请求发生错误:", textStatus, errorThrown);
 								}
 							});
-						}, 1000 * 60 * 60);
+						}, 1000 * 60 * 30);
 					},
 					error: function (XMLHttpRequest, textStatus, errorThrown) {
 					    console.error("AJAX请求发生错误:", textStatus, errorThrown);

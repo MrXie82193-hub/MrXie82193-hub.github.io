@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	let lat = 0;
+	let lon = 0;
 	let mindistancem = 0;
 	let earthquakes = [];
 	let earthquake = {
@@ -150,8 +152,8 @@ $(document).ready(function() {
 			   	dataType: "json",
 				success: function(data){
 					console.log(data);
-					let lat = Math.round(data.y * 100) / 100;
-					let lon = Math.round(data.x * 100) / 100;
+					lat = Math.round(data.y * 100) / 100;
+					lon = Math.round(data.x * 100) / 100;
 					console.log("当前位置经纬度：" + lat + " " + lon);
 					getEarthquakeData();
 					var timer = setInterval(function() {
